@@ -1,0 +1,69 @@
+@import '~/styles/mixins.scss';
+
+.username {
+    @include font(14, 'semibold');
+}
+
+.wrapper {
+    @apply pb-5;
+    border-bottom: 1px solid rgb(var(--ig-separator));
+    header {
+        @apply px-1 py-2 flex items-center justify-between;
+    }
+}
+
+.post-info {
+    @apply flex items-center;
+    .username-group {
+        @apply ml-2.5 p-0.5 flex items-center;
+
+        .verified-badge-icon {
+            @apply ml-1;
+        }
+    }
+    .username-separator {
+        @include font(14, 'regular', 'secondary-text');
+        @apply mx-1;
+    }
+    .post-time {
+        @include font(14, 'regular', 'secondary-text');
+    }
+}
+
+.post-image {
+    @apply rounded;
+}
+
+.options {
+    @apply mt-1 flex;
+    .option-icon {
+        @apply p-2;
+    }
+    .option-icon:first-child {
+        @apply -ml-2;
+    }
+}
+
+.likes {
+    @include font(14, 'semibold');
+    @apply mt-1.5 mb-2;
+}
+
+.post-content {
+}
+
+.view-all-comments {
+    @include font(14, 'regular', 'secondary-text');
+    @apply mb-2;
+}
+
+.add-comment {
+    @apply flex items-center;
+    .input {
+        @include font(14, 'regular');
+        @apply w-full h-[18px] resize-none;
+    }
+    .input::placeholder {
+        @include font(14, 'regular', 'secondary-text');
+    }
+}

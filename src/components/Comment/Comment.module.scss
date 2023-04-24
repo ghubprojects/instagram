@@ -1,0 +1,12 @@
+@import '~/styles/mixins.scss';
+
+.wrapper {
+    @apply mb-2 flex items-center gap-1;
+    .username {
+        @include font(14, 'semibold');
+    }
+
+    .content {
+        @include font(14);
+    }
+}

@@ -1,0 +1,14 @@
+.wrapper {
+    @apply p-[3px];
+    .avatar-image {
+        @apply rounded-full;
+        border: 2px solid white;
+        outline: 3px solid white;
+    }
+    .new-story-border {
+        outline-color: rgb(var(--ig-new-story-border));
+    }
+    .story-border {
+        outline-color: rgb(var(--ig-story-border));
+    }
+}
