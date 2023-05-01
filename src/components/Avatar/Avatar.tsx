@@ -23,7 +23,7 @@ const Avatar: React.FunctionComponent<IAvatarProps> = ({
             classes.push('w-[36px]', 'h-[36px]');
             break;
         case 'md':
-            classes.push('w-[56px]', 'h-[56px]');
+            classes.push('w-[64px]', 'h-[64px]');
             break;
         case 'lg':
             classes.push('w-18', 'h-18');
@@ -33,11 +33,10 @@ const Avatar: React.FunctionComponent<IAvatarProps> = ({
             break;
     }
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx(classes.join(' '), 'wrapper')}>
             <img
                 {...rest}
                 className={cx(
-                    classes.join(' '),
                     'avatar-image',
                     { 'new-story-border': hasNewStory, 'story-border': hasStory },
                     className,

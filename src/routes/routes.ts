@@ -1,7 +1,5 @@
 import config from '~/config';
-import Home from '~/pages/Home/Home';
-import Explore from '~/pages/Explore/Explore';
-import Reels from '~/pages/Reels/Reels';
+import { Home, Explore, Reels, Inbox } from '~/pages';
 
 //Pages
 
@@ -9,6 +7,7 @@ const publicRoutes = [
     { path: config.routes.home, component: Home },
     { path: config.routes.explore, component: Explore },
     { path: config.routes.reels, component: Reels },
+    { path: config.routes.inbox, component: Inbox },
 ];
 
 const privateRoutes = [{}];

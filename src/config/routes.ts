@@ -3,6 +3,8 @@ const routes = {
     home: '/',
     explore: '/explore',
     reels: '/reels',
+    inbox: '/inbox',
+    profile: '/@:username',
     // private routes
 };
 

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 interface ICompassIconProps {
     width?: string;
     height?: string;
@@ -21,12 +19,12 @@ const CompassIcon: React.FunctionComponent<ICompassIconProps> = ({
                 fill='none'
                 points='13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953'
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
             ></polygon>
             <polygon
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 points='10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056'
             ></polygon>
             <circle
@@ -35,9 +33,9 @@ const CompassIcon: React.FunctionComponent<ICompassIconProps> = ({
                 fill='none'
                 r='10.5'
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
             ></circle>
         </svg>
     );

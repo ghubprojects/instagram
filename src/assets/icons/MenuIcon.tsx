@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 interface IMenuIconProps {
     width?: string;
     height?: string;
@@ -17,9 +15,9 @@ const MenuIcon: React.FunctionComponent<IMenuIconProps> = ({ width = '24px', hei
             <line
                 fill='none'
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 x1='3'
                 x2='21'
                 y1='4'
@@ -28,9 +26,9 @@ const MenuIcon: React.FunctionComponent<IMenuIconProps> = ({ width = '24px', hei
             <line
                 fill='none'
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 x1='3'
                 x2='21'
                 y1='12'
@@ -39,9 +37,9 @@ const MenuIcon: React.FunctionComponent<IMenuIconProps> = ({ width = '24px', hei
             <line
                 fill='none'
                 stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 x1='3'
                 x2='21'
                 y1='20'

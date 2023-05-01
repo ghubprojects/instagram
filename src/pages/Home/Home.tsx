@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { NewsFeed, Sidebar, Stories, TheNavbar } from '~/components';
+import { NewsFeed, Sidebar, Stories, TheNavbar } from '~/layouts/components';
 import styles from './Home.module.scss';
 
 interface IHomeProps {}
