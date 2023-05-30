@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 
-function App() {
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        publicRoutes.map((route, key) => {
+            const PublicPage = route.component;
+            return <Route key={key} path={route.path} element={<PublicPage />} />;
+        }),
+    ),
+);
+
+export default function App() {
     return (
-        <BrowserRouter>
-            <div className='App'>
-                <Routes>
-                    {publicRoutes.map((route, key) => {
-                        const PublicPage = route.component;
-                        return <Route key={key} path={route.path} element={<PublicPage />} />;
-                    })}
-                </Routes>
-            </div>
-        </BrowserRouter>
+        <div className='App'>
+            <RouterProvider router={router} />
+        </div>
     );
 }
-
-export default App;

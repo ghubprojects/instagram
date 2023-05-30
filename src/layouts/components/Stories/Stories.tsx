@@ -1,93 +1,101 @@
-import classNames from 'classnames/bind';
-import StoryItem from './StoryItem/StoryItem';
+import { Avatar, Box, Container, Flex, Text } from '@chakra-ui/react';
 import images from '~/assets/images';
-import styles from './Stories.module.scss';
 
 const storyList = [
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        username: 'bichngoc',
-        imgSrc: images.avatar,
+        userName: 'bichngoc',
+        userAvatar: images.avatar,
         storyStatus: 0,
     },
 ];
-
-const cx = classNames.bind(styles);
 
 interface IStoriesProps {}
 
 const Stories: React.FunctionComponent<IStoriesProps> = () => {
     return (
-        <div className={cx('container')}>
+        <Flex
+            gap='19px'
+            paddingY={4}
+            marginTop={8}
+            overflowX='auto'
+            width='full'
+            maxWidth='var(--feed-width-wide-story)'
+        >
             {storyList.map((story, index) => (
-                <StoryItem
-                    key={index}
-                    imgSrc={story.imgSrc}
-                    username={story.username}
-                    hasNewStory={story.storyStatus == 1}
-                    hasStory={story.storyStatus == 0}
-                />
+                <Box key={index} padding='0.5'>
+                    <Avatar
+                        src={story.userAvatar}
+                        size='base'
+                        showBorder={true}
+                        border='2px solid white'
+                        outline='2px solid red'
+                    />
+                    <Text fontSize='xs' lineHeight='1' align='center' mt='8px'>
+                        {story.userName}
+                    </Text>
+                </Box>
             ))}
-        </div>
+        </Flex>
     );
 };
 

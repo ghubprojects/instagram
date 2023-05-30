@@ -1,15 +1,13 @@
-import config from '~/config';
-import { Home, Explore, Reels, Inbox } from '~/pages';
-
-//Pages
+import paths from '~/config/paths';
+import { ExplorePage, HomePage, InboxPage, ReelsPage } from '~/pages';
 
 const publicRoutes = [
-    { path: config.routes.home, component: Home },
-    { path: config.routes.explore, component: Explore },
-    { path: config.routes.reels, component: Reels },
-    { path: config.routes.inbox, component: Inbox },
+    { path: paths.home, component: HomePage },
+    { path: paths.explore, component: ExplorePage },
+    { path: paths.reels, component: ReelsPage },
+    { path: paths.inbox, component: InboxPage },
 ];
 
 const privateRoutes = [{}];
 
-export { publicRoutes, privateRoutes };
+export { privateRoutes, publicRoutes };

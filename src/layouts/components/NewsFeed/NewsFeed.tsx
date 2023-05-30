@@ -1,20 +1,17 @@
-import classNames from 'classnames/bind';
-import styles from './NewsFeed.module.scss';
-import Post from './Post/Post';
+import { Flex } from '@chakra-ui/react';
+import Post from './Post';
 
 interface INewsFeedProps {}
 
-const cx = classNames.bind(styles);
-
 const NewsFeed: React.FunctionComponent<INewsFeedProps> = () => {
     return (
-        <section className={cx('container')}>
+        <Flex flexDirection='column' gap={3} maxWidth='470px' width='full' mt={4} mx='auto'>
             <Post />
             <Post />
             <Post />
             <Post />
             <Post />
-        </section>
+        </Flex>
     );
 };
 

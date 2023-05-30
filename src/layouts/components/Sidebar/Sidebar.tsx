@@ -1,9 +1,8 @@
-import classNames from 'classnames/bind';
-import { Avatar, Button } from '~/components';
-import SuggestedAccount from './SuggestedAccount/SuggestedAccount';
-import MoreInfo from './MoreInfo/MoreInfo';
+import { Avatar, Box, Button, Flex, List, ListItem, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import images from '~/assets/images';
-import styles from './Sidebar.module.scss';
+import { moreInfoItems } from '~/utils/layoutItems';
+import SuggestedAccount from './SuggestedAccount';
 
 const suggestedAccounts = [
     {
@@ -38,27 +37,65 @@ const suggestedAccounts = [
     },
 ];
 
-const cx = classNames.bind(styles);
-
 interface ISidebarProps {}
 
 const Sidebar: React.FunctionComponent<ISidebarProps> = () => {
     return (
-        <aside className={cx('container')}>
-            <div className={cx('current-account')}>
-                <Avatar src={images.avatar} size='md' className={cx('avatar')} />
-                <div className={cx('username-group')}>
-                    <div className={cx('username')}>bich.ngoc</div>
-                    <span className={cx('fullname')}>Bich Ngoc</span>
-                </div>
-                <Button>Switch</Button>
-            </div>
-            <section className={cx('suggested')}>
-                <div className={cx('title')}>
-                    <p className={cx('text')}>Suggested for you</p>
-                    <Button>See all</Button>
-                </div>
-                <div className={cx('suggested-accounts')}>
+        <Box as='aside' maxWidth='var(--feed-sidebar-width)' width='full' paddingTop={4} marginTop={8}>
+            {/* Current User */}
+            <Flex align='center' marginBottom={4} marginLeft='-3px'>
+                <Box padding='0.5' marginRight={3}>
+                    <Avatar
+                        src={images.avatar}
+                        size='base'
+                        showBorder={true}
+                        border='2px solid transparent'
+                        outline='2px solid transparent'
+                    />
+                </Box>
+
+                <Flex flexGrow={1} direction='column'>
+                    <Text fontSize={14} lineHeight='18px' fontWeight='semibold'>
+                        bich.ngoc
+                    </Text>
+                    <Text fontSize={14} lineHeight='18px' color='rgb(var(--ig-secondary-text))'>
+                        Bich Ngoc
+                    </Text>
+                </Flex>
+                <Button
+                    variant='unstyled'
+                    fontSize={12}
+                    lineHeight='16px'
+                    fontWeight='semibold'
+                    color='rgb(var(--ig-primary-button))'
+                >
+                    Switch
+                </Button>
+            </Flex>
+
+            {/* Suggested Accounts */}
+            <Box as='section' marginBottom={4}>
+                <Flex align='center' justify='space-between'>
+                    <Text
+                        fontSize={14}
+                        lineHeight='18px'
+                        fontWeight='semibold'
+                        color='rgb(var(--ig-secondary-text))'
+                    >
+                        Suggested for you
+                    </Text>
+                    <Button
+                        variant='unstyled'
+                        fontSize={12}
+                        lineHeight='16px'
+                        fontWeight='semibold'
+                        color='rgb(var(--ig-primary-button))'
+                    >
+                        See All
+                    </Button>
+                </Flex>
+
+                <Box paddingY={2} width='full'>
                     {suggestedAccounts.map((account, index) => (
                         <SuggestedAccount
                             key={index}
@@ -68,10 +105,24 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = () => {
                             followStatus={account.followStatus ? 'Following' : 'Follow'}
                         />
                     ))}
-                </div>
-            </section>
-            <MoreInfo />
-        </aside>
+                </Box>
+            </Box>
+
+            {/* MoreInfo Section */}
+            <Box as='section' fontSize={12} color='rgb(var(--ig-tertiary-text))'>
+                <List display='flex' flexWrap='wrap' marginBottom={4}>
+                    {moreInfoItems.map((item, index) => (
+                        <ListItem key={index}>
+                            <Link to={item.to}>{item.title}</Link>
+                            <Text as='span' marginX='3px' hidden={index == moreInfoItems.length - 1}>
+                                ·
+                            </Text>
+                        </ListItem>
+                    ))}
+                </List>
+                <Text textTransform='uppercase'>© 2023 instagram from meta</Text>
+            </Box>
+        </Box>
     );
 };
 

@@ -1,11 +1,11 @@
-const routes = {
-    // public routes
+const paths = {
+    // public paths
     home: '/',
     explore: '/explore',
     reels: '/reels',
     inbox: '/inbox',
     profile: '/@:username',
-    // private routes
+    // private paths
 };
 
-export default routes;
+export default paths;
