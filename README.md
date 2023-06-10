@@ -32,11 +32,11 @@
 
 ### Build with
 
--   [Vite](https://vitejs.dev/)
--   [ReactJS](https://react.dev/)
--   [Chakra UI](https://chakra-ui.com/)
--   [Sass](https://sass-lang.com/)
--   [Axios](https://github.com/axios/axios)
+-   [<img src="https://vitejs.dev/logo.svg" width="14"/>&nbsp;Vite](https://vitejs.dev/)
+-   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/0565b27a-02ae-467e-99cf-093ee913a185" width="14"/>&nbsp;ReactJS](https://react.dev/)
+-   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/23132682-4a09-4357-9091-4475f7061ae9" width="14"/>&nbsp;Chakra UI](https://chakra-ui.com/)
+-   [<img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" width="14"/>&nbsp;Sass](https://sass-lang.com/)
+-   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/0a5a9ee6-82f8-4cb1-9010-d737fb9f7403" width="14"/>&nbsp;Axios](https://github.com/axios/axios)
 
 ## Getting Started
 
@@ -92,52 +92,79 @@ instagram
 ├── .gitignore
 ├── .prettierrc
 ├── index.html
+├── LICENSE
 ├── package.json
 ├── pnpm-lock.yaml
 ├── tsconfig.json
 ├── tsconfig.node.json
 ├── vite.config.ts
+|
 ├── src
+│ ├── api
+| | ├── Auth
+| | ├── Post
+| | └── httpClient
+| |
 │ ├── assets
 | | ├── fonts
 | | ├── icons
 | | └── images
+| |
 │ ├── components
-| | └── Avatar
-│ ├── config
-| | └── paths
-│ ├── layouts
-| | ├── components
+| |
+| ├── features
+| | ├── AuthForm
+| | | ├── LoginForm
+| | | └── SignUpForm
+| | ├── Navbar
 | | | ├── Navbar
-| | | | ├── Navbar
-| | | | └── NavItem
+| | | └── NavItem
+| | ├── NewsFeed
+| | | ├── Comment
 | | | ├── NewsFeed
-| | | | ├── Comment
-| | | | ├── NewsFeed
-| | | | └── Post
+| | | └── Post
+| | ├── Sidebar
 | | | ├── Sidebar
-| | | | ├── Sidebar
-| | | | └── SuggestedAccount
-| | | ├── Stories
-| | | | └── Stories
+| | | └── SuggestedAccount
+| | └── Stories
+| | └── Stories
+| |
 | ├── pages
-| | ├── ExplorePage
-| | ├── HomePage
-| | ├── InboxPage
-| | ├── PageNotFound
-| | └── ReelsPage
+| | ├── auth
+| | | ├── Login
+| | | ├── SignUp
+| | | └── ForgotPassword
+| | ├── Error
+| | ├── Explore
+| | ├── Home
+| | ├── Inbox
+| | └── Reels
+| |
 | ├── routes
+| | ├── auth
+| | ├── main
+| | └── post
+| |
 | ├── styles
+| | ├── theme
+| | | ├── Avatar
+| | | ├── Button
+| | | ├── Input
+| | | └── Text
 | | ├── fonts
 | | ├── global
 | | ├── mixins
-| | ├── variables
-| | └── theme.ts
+| | └── variables
+| |
 | ├── utils
 | | ├── enum
+| | ├── styles
 | | └── layoutItems
+| |
+│ ├── router.ts
 │ ├── App.tsx
 │ └── main.tsx
+|
 ├── public
 │ └── vite.svg
 └── node_modules
