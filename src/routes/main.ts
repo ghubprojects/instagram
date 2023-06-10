@@ -1,11 +1,8 @@
-const paths = {
-    // public paths
+export default {
     home: '/',
     explore: '/explore',
     reels: '/reels',
     inbox: '/inbox',
     profile: '/@:username',
-    // private paths
+    error: '*',
 };
-
-export default paths;

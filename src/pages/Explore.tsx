@@ -1,17 +1,17 @@
 import { Text } from '@chakra-ui/react';
-import { Navbar } from '~/layouts/components';
+import { Navbar } from '~/features';
 
-interface IReelsProps {}
+interface IExploreProps {}
 
-const Reels: React.FunctionComponent<IReelsProps> = (props) => {
+const Explore: React.FunctionComponent<IExploreProps> = (props) => {
     return (
         <div>
             <Navbar />
             <Text marginLeft={300} fontSize='3xl'>
-                Reels Page
+                Explore Page
             </Text>
         </div>
     );
 };
 
-export default Reels;
+export default Explore;

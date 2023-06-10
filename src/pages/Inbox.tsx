@@ -1,5 +1,5 @@
 import { Text } from '@chakra-ui/react';
-import { Navbar } from '~/layouts/components';
+import { Navbar } from '~/features';
 
 interface IInboxProps {}
 

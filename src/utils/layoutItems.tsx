@@ -15,12 +15,12 @@ import {
     VideoIcon,
 } from '~/assets/icons';
 import images from '~/assets/images';
-import paths from '~/config/paths';
+import { main } from '~/routes';
 
 export const navbarItems = [
     {
         title: 'Home',
-        linkUrl: paths.home,
+        linkUrl: main.home,
         leftIcon: <HomeIcon />,
         leftActiveIcon: <HomeActiveIcon />,
     },
@@ -31,19 +31,19 @@ export const navbarItems = [
     },
     {
         title: 'Explore',
-        linkUrl: paths.explore,
+        linkUrl: main.explore,
         leftIcon: <CompassIcon />,
         leftActiveIcon: <CompassActiveIcon />,
     },
     {
         title: 'Reels',
-        linkUrl: paths.reels,
+        linkUrl: main.reels,
         leftIcon: <VideoIcon />,
         leftActiveIcon: <VideoActiveIcon />,
     },
     {
         title: 'Messages',
-        linkUrl: paths.inbox,
+        linkUrl: main.inbox,
         leftIcon: <MessageIcon />,
         leftActiveIcon: <MessageActiveIcon />,
     },
@@ -59,7 +59,7 @@ export const navbarItems = [
     },
     {
         title: 'Profile',
-        // linkUrl: paths.profile,
+        // linkUrl: main.profile,
         avatar: images.avatar,
     },
 ];

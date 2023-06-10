@@ -1,5 +1,5 @@
-import { Box, Center, Container, Flex } from '@chakra-ui/react';
-import { NewsFeed, Sidebar, Stories, Navbar } from '~/layouts/components';
+import { Box, Flex } from '@chakra-ui/react';
+import { Navbar, NewsFeed, Sidebar, Stories } from '~/features';
 
 interface IHomeProps {}
 
