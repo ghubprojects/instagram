@@ -32,11 +32,11 @@
 
 ### Build with
 
--   [<img src="https://vitejs.dev/logo.svg" width="14"/>&nbsp;Vite](https://vitejs.dev/)
--   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/0565b27a-02ae-467e-99cf-093ee913a185" width="14"/>&nbsp;ReactJS](https://react.dev/)
--   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/23132682-4a09-4357-9091-4475f7061ae9" width="14"/>&nbsp;Chakra UI](https://chakra-ui.com/)
--   [<img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" width="14"/>&nbsp;Sass](https://sass-lang.com/)
--   [<img src="https://github.com/ghubprojects/instagram/assets/83504674/0a5a9ee6-82f8-4cb1-9010-d737fb9f7403" width="14"/>&nbsp;Axios](https://github.com/axios/axios)
+-   <img src="https://vitejs.dev/logo.svg" width="14"/>&nbsp;[Vite](https://vitejs.dev/)
+-   <img src="https://github.com/ghubprojects/instagram/assets/83504674/0565b27a-02ae-467e-99cf-093ee913a185" width="14"/>&nbsp;[ReactJS](https://react.dev/)
+-   <img src="https://github.com/ghubprojects/instagram/assets/83504674/23132682-4a09-4357-9091-4475f7061ae9" width="14"/>&nbsp;[Chakra UI](https://chakra-ui.com/)
+-   <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" width="14"/>&nbsp;[Sass](https://sass-lang.com/)
+-   <img src="https://github.com/ghubprojects/instagram/assets/83504674/0a5a9ee6-82f8-4cb1-9010-d737fb9f7403" width="14"/>&nbsp;[Axios](https://github.com/axios/axios)
 
 ## Getting Started
 
