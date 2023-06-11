@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '~/routes';
 
 interface ISignUpFormProps extends ChakraProps {}
 
@@ -61,7 +62,7 @@ const SignUpForm: React.FunctionComponent<ISignUpFormProps> = (props) => {
                 </Text>
             </VStack>
 
-            <Button size='sm' width='full' marginBottom={3}>
+            <Button as={Link} to={auth.login} size='sm' width='full' marginBottom={3}>
                 Sign Up
             </Button>
         </FormControl>

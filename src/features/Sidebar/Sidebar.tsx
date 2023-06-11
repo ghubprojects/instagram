@@ -1,8 +1,18 @@
-import { Avatar, Box, Button, Flex, List, ListItem, Text } from '@chakra-ui/react';
+import { Avatar, Box, Button, Flex, List, ListItem, Modal, Text, useDisclosure } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 import { moreInfoItems } from '~/utils/layoutItems';
+import {
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+} from '@chakra-ui/react';
 import SuggestedAccount from './SuggestedAccount';
+import { CircleCheckIcon } from '~/assets/icons';
+import { auth } from '~/routes';
 
 const suggestedAccounts = [
     {
@@ -40,6 +50,7 @@ const suggestedAccounts = [
 interface ISidebarProps {}
 
 const Sidebar: React.FunctionComponent<ISidebarProps> = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box as='aside' maxWidth='var(--feed-sidebar-width)' width='full' paddingTop={4} marginTop={8}>
             {/* Current User */}
@@ -68,9 +79,62 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = () => {
                     lineHeight='16px'
                     fontWeight='semibold'
                     color='rgb(var(--ig-primary-button))'
+                    onClick={onOpen}
                 >
                     Switch
                 </Button>
+
+                <Modal isOpen={isOpen} onClose={onClose} isCentered>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalHeader>
+                            <Text fontSize='text.16' lineHeight='text.16' align='center'>
+                                Switch Accounts
+                            </Text>
+                        </ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <Flex align='center' marginBottom={4} marginLeft='-3px'>
+                                <Box padding='0.5' marginRight={3}>
+                                    <Avatar
+                                        src={images.avatar}
+                                        size='base'
+                                        showBorder={true}
+                                        border='2px solid transparent'
+                                        outline='2px solid transparent'
+                                    />
+                                </Box>
+
+                                <Flex flexGrow={1} direction='column'>
+                                    <Text fontSize={14} lineHeight='18px' fontWeight='semibold'>
+                                        bich.ngoc
+                                    </Text>
+                                    <Text
+                                        fontSize={14}
+                                        lineHeight='18px'
+                                        color='rgb(var(--ig-secondary-text))'
+                                    >
+                                        Bich Ngoc
+                                    </Text>
+                                </Flex>
+                                <CircleCheckIcon />
+                            </Flex>
+                        </ModalBody>
+
+                        <ModalFooter>
+                            <Button
+                                as={Link}
+                                to={auth.login}
+                                size='md'
+                                width='full'
+                                fontSize='text.14'
+                                lineHeight='text.14'
+                            >
+                                Log into an Existing Account
+                            </Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
             </Flex>
 
             {/* Suggested Accounts */}

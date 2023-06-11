@@ -8,6 +8,8 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { main } from '~/routes';
 
 interface ILoginFormProps extends ChakraProps {}
 
@@ -40,7 +42,7 @@ const LoginForm: React.FunctionComponent<ILoginFormProps> = (props) => {
                 </InputGroup>
             </VStack>
 
-            <Button size='sm' width='full' marginY={3}>
+            <Button as={Link} to={main.home} size='sm' width='full' marginY={3}>
                 Log In
             </Button>
         </FormControl>

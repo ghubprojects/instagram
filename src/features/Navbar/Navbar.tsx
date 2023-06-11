@@ -1,15 +1,18 @@
 import { Flex, Image } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { MenuActiveIcon, MenuIcon } from '~/assets/icons';
 import images from '~/assets/images';
+import { main } from '~/routes';
 import { navbarItems } from '~/utils/layoutItems';
+import MoreMenu from './MoreMenu';
 import NavItem from './NavItem';
 
 interface ITheNavbarProps {}
 
 const TheNavbar: React.FunctionComponent<ITheNavbarProps> = () => {
-    const [activeNavItem, setActiveNavItem] = useState('Home');
-    const [activeMenu, setActiveMenu] = useState(false);
+    const [activeItem, setActiveItem] = useState('Home');
 
     return (
         <Flex
@@ -21,41 +24,22 @@ const TheNavbar: React.FunctionComponent<ITheNavbarProps> = () => {
             width='var(--nav-medium-width)'
             borderRight='1px solid rgb(var(--ig-separator))'
         >
-            <Image
-                src={images.instagramBrand}
-                paddingX={3}
-                paddingY={8}
-                width='fit-content'
-                cursor='pointer'
-            />
-            <Flex
-                as='nav'
-                flexGrow={1}
-                direction='column'
-                justify='space-between'
-                height='full'
-                marginY={1}
-            >
+            <Link to={main.home}>
+                <Image src={images.instagramBrand} paddingX={3} paddingY={8} width='fit-content' />
+            </Link>
+            <Flex as='nav' direction='column' justify='space-between' height='full'>
                 <Flex direction='column' gap={2}>
-                    {navbarItems.map((item, index) => (
+                    {navbarItems.map((item) => (
                         <NavItem
-                            key={index}
-                            title={item.title}
-                            active={activeNavItem === item.title}
-                            linkUrl={item.linkUrl ?? ''}
-                            avatar={item.avatar}
-                            leftIcon={activeNavItem === item.title ? item.leftActiveIcon : item.leftIcon}
-                            onClick={() => setActiveNavItem(item.title)}
+                            key={item.id}
+                            data={item}
+                            active={activeItem === item.title}
+                            onClick={() => setActiveItem(item.title)}
                         />
                     ))}
                 </Flex>
 
-                <NavItem
-                    title='More'
-                    active={activeMenu}
-                    leftIcon={activeMenu ? <MenuActiveIcon /> : <MenuIcon />}
-                    onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-                />
+                <MoreMenu />
             </Flex>
         </Flex>
     );
