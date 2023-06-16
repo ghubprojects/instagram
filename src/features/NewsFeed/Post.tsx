@@ -13,15 +13,15 @@ import Comment from './Comment';
 const comments = [
     {
         username: 'someone.01',
-        content: 'Khăn đẹp quá',
+        content: 'So happy...',
     },
     {
         username: 'someone.02',
-        content: 'Quá là xịn luôn',
+        content: 'Congratulation!',
     },
     {
         username: 'someone.03',
-        content: 'Chỉ biết ước',
+        content: 'Good luck.',
     },
 ];
 
@@ -43,7 +43,7 @@ const Post: React.FunctionComponent<IPostProps> = (props) => {
                     </Box>
                     <Flex alignItems='center' marginLeft={2.5} padding={0.5}>
                         <Text fontSize='14px' fontWeight='semibold'>
-                            bich.ngoc
+                            user
                         </Text>
                         <Box marginLeft={1}>
                             <VerifiedBadgeIcon />
@@ -79,7 +79,7 @@ const Post: React.FunctionComponent<IPostProps> = (props) => {
             </Text>
 
             <Box as='section'>
-                <Comment username={'bich.ngoc'} content={'Iu người tặng khăn...'} />
+                <Comment username={'username'} content={'Woaa...'} />
 
                 <Text fontSize='14px' color='rgb(var(--ig-secondary-text))' marginBottom={2}>
                     View all 999 comments

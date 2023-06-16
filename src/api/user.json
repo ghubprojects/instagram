@@ -1,0 +1,89 @@
+[
+    {
+        "fullName": "John Doe",
+        "username": "johndoe",
+        "password": "password123",
+        "confirm_password": "password123"
+    },
+    {
+        "fullName": "Michael Anderson",
+        "username": "michaelanderson94",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "5871209671",
+        "email": "michaelanderson94@example.com",
+        "bio": "Hi, I'm Michael Anderson! I'm a friendly entertainer who loves to explore new things."
+    },
+    {
+        "fullName": "Sophia Wilson",
+        "username": "sophiawilson37",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "8294058163",
+        "email": "sophiawilson37@example.com",
+        "bio": "Hi, I'm Sophia Wilson! I'm a creative dreamer who loves to explore new things."
+    },
+    {
+        "fullName": "Benjamin Johnson",
+        "username": "benjaminjohnson18",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "9107364829",
+        "email": "benjaminjohnson18@example.com",
+        "bio": "Hi, I'm Benjamin Johnson! I'm an enthusiastic visionary who loves to explore new things."
+    },
+    {
+        "fullName": "Emma Taylor",
+        "username": "emmataylor79",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "1875396024",
+        "email": "emmataylor79@example.com",
+        "bio": "Hi, I'm Emma Taylor! I'm a curious writer who loves to explore new things."
+    },
+    {
+        "fullName": "Daniel Davis",
+        "username": "danieldavis62",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "6782309645",
+        "email": "danieldavis62@example.com",
+        "bio": "Hi, I'm Daniel Davis! I'm an ambitious learner who loves to explore new things."
+    },
+    {
+        "fullName": "Olivia Clark",
+        "username": "oliviaclark12",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "5408317952",
+        "email": "oliviaclark12@example.com",
+        "bio": "Hi, I'm Olivia Clark! I'm a passionate artist who loves to explore new things."
+    },
+    {
+        "fullName": "David Miller",
+        "username": "davidmiller44",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "3614972538",
+        "email": "davidmiller44@example.com",
+        "bio": "Hi, I'm David Miller! I'm an ambitious explorer who loves to explore new things."
+    },
+    {
+        "fullName": "Emily Anderson",
+        "username": "emilyanderson14",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "9598032147",
+        "email": "emilyanderson14@example.com",
+        "bio": "Hi, I'm Emily Anderson! I'm a friendly dreamer who loves to explore new things."
+    },
+    {
+        "fullName": "John Smith",
+        "username": "johnsmith44",
+        "password": "password123",
+        "confirm_password": "password123",
+        "mobile": "3725061985",
+        "email": "johnsmith44@example.com",
+        "bio": "Hi, I'm John Smith! I'm a passionate entertainer who loves to explore new things."
+    }
+]

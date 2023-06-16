@@ -3,67 +3,67 @@ import images from '~/assets/images';
 
 const storyList = [
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 1,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
     {
-        userName: 'bichngoc',
+        userName: 'user',
         userAvatar: images.avatar,
         storyStatus: 0,
     },
@@ -84,7 +84,6 @@ const Stories: React.FunctionComponent<IStoriesProps> = () => {
             {storyList.map((story, index) => (
                 <Box key={index} padding='0.5'>
                     <Avatar
-                        src={story.userAvatar}
                         size='base'
                         showBorder={true}
                         border='2px solid white'

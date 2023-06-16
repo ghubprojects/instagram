@@ -36,13 +36,13 @@ const suggestedAccounts = [
     {
         imgSrc: images.avatar,
         username: 'someone.04',
-        suggestedText: 'Followed by the.anh + 3 more',
+        suggestedText: 'Followed by some.one + 3 more',
         followStatus: true,
     },
     {
         imgSrc: images.avatar,
         username: 'someone.05',
-        suggestedText: 'Followed by the.anh + 1 more',
+        suggestedText: 'Followed by some.one + 1 more',
         followStatus: true,
     },
 ];
@@ -67,10 +67,10 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = () => {
 
                 <Flex flexGrow={1} direction='column'>
                     <Text fontSize={14} lineHeight='18px' fontWeight='semibold'>
-                        bich.ngoc
+                        username
                     </Text>
                     <Text fontSize={14} lineHeight='18px' color='rgb(var(--ig-secondary-text))'>
-                        Bich Ngoc
+                        Fullname
                     </Text>
                 </Flex>
                 <Button
